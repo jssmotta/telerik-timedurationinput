@@ -1,0 +1,39 @@
+<div id="hospital" class="k-d-flex-col k-justify-content-between k-align-items-start"
+     style="gap:2em; margin:2em; width:60%;">
+    <h2>jQuery TimeDurationPicker</h2>
+
+    <div class="row">
+        <div class="col-12 u-s-mb0">
+            <h1 class="u-c-white u-fs31 u-mb1">Kendo UI for jQuery</h1>
+            <h1 class="u-c-white u-mb3 js-PageTitle">
+                jQuery  TimeDurationPicker
+            </h1>
+        </div>
+        <div class="col-6 u-m-col-12 u-m-mb2 u-s-mb2">
+            <div class="u-fs28 u-fw3 u-mt1"><ul class="BulletCheck Space--cozy u-ff-sans1 u-fs20 u-mb4"><li>Allow a user to type or select a specific time duration, leveraging the built-in list of values for days, hours, minutes, seconds and milliseconds with the Kendo UI for jQuery TimeDurationPicker component.</li><li>Part of the Kendo UI for jQuery library along with 100+ professionally designed components developers trust for all their jQuery UI needs.</li><li>Get up and running quickly with award winning support, detailed documentation, demos, virtual classrooms and a three-million-strong developer community.</li></ul></div>
+            <div class="u-mb4 u-xl-pb2 u-s-pb0 u-s-mb0 u-s-pt1">
+                <a href="https://www.telerik.com/try/kendo-ui" class="Btn Btn--l Btn--prim Btn--wxl js-btnWin track--hero-cta u-fs24 u-s- a-b-test-hide" data-track-instance="2">Download Free Trial</a>
+            </div>
+        </div>
+        <div class="k-d-flex k-justify-content-center">
+            <div class="k-w-300">
+                <label>Select duration:</label>
+                <input id="timedurationpicker" title="timedurationpicker" />
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("#timedurationpicker").kendoTimeDurationPicker({
+                columns: [{ name: "hours", format: "## hours " }, { name: "minutes", format: " ## minutes" }],
+                shortcuts: [
+                    { text: "1h 30min", value: 5400000 },
+                    { text: "2h 30min", value: 9000000 },
+                    { text: "4 hours", value: 14400000 }
+                ],
+                separator: ":"
+            });            
+        });
+    </script>
+
+</div>

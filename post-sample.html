@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2022.3.1109/styles/kendo.default-ocean-blue.min.css" />
+        <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+        <script src="https://kendo.cdn.telerik.com/2022.3.1109/js/jszip.min.js"></script>
+        <script src="https://kendo.cdn.telerik.com/2022.3.1109/js/kendo.all.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <input id="timedurationpicker" title="timedurationpicker" />
+        <button id="get-value">Get Value</button>
+        <script>
+            var myTimeDurationPicker = // define a var to read the value after
+                $("#timedurationpicker").kendoTimeDurationPicker({
+                columns: [{ name: "hours", format: "## h " }, { name: "minutes", format: " ## m" }],
+                shortcuts: [
+                    { text: "30min", value: 1800000 },
+                    { text: "1h 30min", value: 5400000 },
+                    { text: "2 hours", value: 7200000 }
+                ],
+                separator: ":"
+            }).data("kendoTimeDurationPicker");
+
+            $("#get-value").kendoButton({
+            click: function() {
+                    kendo.alert(myTimeDurationPicker.value()); // read and display the value
+                }
+            });
+        </script>
+    </body>
+</html>

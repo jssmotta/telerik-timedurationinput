@@ -1,0 +1,70 @@
+<div id="paytv" class="k-d-flex-col k-justify-content-between k-align-items-start"
+     style="gap:2em; margin:2em; width:60%;">
+    <h2>Channel Morning Configuration</h2>
+
+    <div class="k-d-flex k-justify-content-center">
+        <div class="k-w-300">
+            <label>News</label>
+            <input id="timedurationpickerNews" title="timedurationpicker" />
+        </div>
+    </div>
+    <div class="k-d-flex k-justify-content-center">
+        <div class="k-w-300">
+            <label>Sport</label>
+            <input id="timedurationpickerSport" title="timedurationpicker" />
+        </div>
+    </div>
+    <div class="k-d-flex k-justify-content-center">
+        <div class="k-w-300">
+            <label>Family</label>
+            <input id="timedurationpickerFamily" title="timedurationpicker" />
+        </div>
+    </div>
+    <div class="k-d-flex k-justify-content-center">
+        <div class="k-w-300">
+            <label>Culinary</label>
+            <input id="timedurationpickerCulinary" title="timedurationpicker" />
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("#timedurationpickerNews").kendoTimeDurationPicker({
+                columns: [{ name: "hours", format: "## hours " }, { name: "minutes", format: " ## minutes" }, { name: "seconds", format: " ## seconds" }],
+                shortcuts: [
+                    { text: "1h 30min", value: 5400000 },
+                    { text: "2 hours", value: 7200000 },
+                    { text: "3 hours", value: 10800000 }
+                ],
+                separator: ":"
+            });
+            $("#timedurationpickerSport").kendoTimeDurationPicker({
+                columns: [{ name: "hours", format: "## hours " }, { name: "minutes", format: " ## minutes" }, { name: "seconds", format: " ## seconds" }],
+                shortcuts: [
+                    { text: "1h 30min", value: 5400000 },
+                    { text: "2 hours", value: 7200000 },
+                    { text: "3 hours", value: 10800000 }
+                ],
+                separator: ":"
+            });
+            $("#timedurationpickerFamily").kendoTimeDurationPicker({
+                columns: [{ name: "hours", format: "## hours " }, { name: "minutes", format: " ## minutes" }, { name: "seconds", format: " ## seconds" }],
+                shortcuts: [
+                    { text: "1h 30min", value: 5400000 },
+                    { text: "2 hours", value: 7200000 },
+                    { text: "3 hours", value: 10800000 }
+                ],
+                separator: ":"
+            });
+            $("#timedurationpickerCulinary").kendoTimeDurationPicker({
+                columns: [{ name: "hours", format: "## hours " }, { name: "minutes", format: " ## minutes" }, { name: "seconds", format: " ## seconds" }],
+                shortcuts: [
+                    { text: "1h 30min", value: 5400000 },
+                    { text: "2 hours", value: 7200000 },
+                    { text: "3 hours", value: 10800000 }
+                ],
+                separator: ":"
+            });
+        });
+    </script>
+
+</div>

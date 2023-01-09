@@ -1,0 +1,101 @@
+<div id="paytv" class="k-d-flex-col k-justify-content-between k-align-items-start"
+     style="gap:2em; margin:2em; width:60%;">
+    <h2>My Daily Activities</h2>
+
+    <div class="k-d-flex k-justify-content-center">
+        <div class="k-w-300">
+            <label>Breakfast</label>
+            <input id="timedurationpickerBreak" title="timedurationpicker" />
+        </div>
+    </div>
+    <div class="k-d-flex k-justify-content-center">
+        <div class="k-w-300">
+            <label>Gym</label>
+            <input id="timedurationpickerGym" title="timedurationpicker" />
+        </div>
+    </div>
+    <div class="k-d-flex k-justify-content-center">
+        <div class="k-w-300">
+            <label>Phylosofy Study</label>
+            <input id="timedurationpickerStudy" title="timedurationpicker" />
+        </div>
+    </div>
+    <div class="k-d-flex k-justify-content-center">
+        <div class="k-w-300">
+            <label>Gardening</label>
+            <input id="timedurationpickerGardening" title="timedurationpicker" />
+        </div>
+    </div>
+    <div class="k-d-flex k-justify-content-center">
+        <div class="k-w-300">
+            <label>Prepare Classes</label>
+            <input id="timedurationpickerClasses" title="timedurationpicker" />
+        </div>
+    </div>
+    <div class="k-d-flex k-justify-content-center">
+        <div class="k-w-300">
+            <label>Teaching</label>
+            <input id="timedurationpickerTeaching" title="timedurationpicker" />
+            <button id="get-value">Get Value Teaching</button>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+
+            $("#get-value").kendoButton({
+            click: function() { 
+                    kendo.alert(teaching.value() + " milliseconds");
+                }
+            });
+
+            $("#timedurationpickerBreak").kendoTimeDurationPicker({
+                columns: [{ name: "hours", format: "## h " }, { name: "minutes", format: " ## m" }],
+                shortcuts: [
+                    { text: "30min", value: 1800000 },
+                    { text: "1h 30min", value: 5400000 },
+                    { text: "2 hours", value: 7200000 }
+                ],
+                separator: ":"
+            });
+            $("#timedurationpickerGym").kendoTimeDurationPicker({
+                columns: [{ name: "hours", format: "## h " }, { name: "minutes", format: " ## m" }],
+                separator: ":"
+            });
+            $("#timedurationpickerStudy").kendoTimeDurationPicker({
+                columns: [{ name: "hours", format: "## " }, { name: "minutes", format: " ##" }],
+                shortcuts: [
+                    { text: "30min", value: 1800000 }
+                ],
+                separator: ":"
+            });
+            $("#timedurationpickerGardening").kendoTimeDurationPicker({
+                columns: [{ name: "hours", format: "## h " }, { name: "minutes", format: " ## m" }],
+                shortcuts: [
+                    { text: "30min", value: 1800000 },
+                    { text: "1h 30min", value: 5400000 },
+                    { text: "2 hours", value: 7200000 }
+                ],
+                separator: ":"
+            });
+            $("#timedurationpickerClasses").kendoTimeDurationPicker({
+                columns: [{ name: "hours", format: "## h " }, { name: "minutes", format: " ## m" }],
+                shortcuts: [
+                    { text: "30min", value: 1800000 },
+                    { text: "1h 30min", value: 5400000 },
+                    { text: "2 hours", value: 7200000 }
+                ],
+                separator: ":"
+            });
+            var teaching = $("#timedurationpickerTeaching").kendoTimeDurationPicker({
+                columns: [{ name: "hours", format: "## h " }, { name: "minutes", format: " ## m" }],
+                shortcuts: [
+                    { text: "30min", value: 1800000 },
+                    { text: "1h 30min", value: 5400000 },
+                    { text: "2 hours", value: 7200000 }
+                ],
+                separator: ":"
+            }).data("kendoTimeDurationPicker");
+        });
+    </script>
+
+</div>

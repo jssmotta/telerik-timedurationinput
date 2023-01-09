@@ -1,2 +1,2 @@
-# telerik-timedurationinput
-Demonstration of Progress Telerik TimeDurationInput jQueryUI
+# Telerik_TimeDurationPickerSample
+Telerik Time Duration Picker Sample

@@ -1,0 +1,70 @@
+<div id="hospital" class="k-d-flex-col k-justify-content-between k-align-items-start"
+     style="gap:2em; margin:2em; width:60%;">
+    <h2>Resonance Magnetic Configuration</h2>
+
+    <div class="k-d-flex k-justify-content-center">
+        <div class="k-w-300">
+            <label>Brain</label>
+            <input id="timedurationpickerBrain" title="timedurationpicker" />
+        </div>
+    </div>
+    <div class="k-d-flex k-justify-content-center">
+        <div class="k-w-300">
+            <label>Spine</label>
+            <input id="timedurationpickerSpine" title="timedurationpicker" />
+        </div>
+    </div>
+    <div class="k-d-flex k-justify-content-center">
+        <div class="k-w-300">
+            <label>Joints</label>
+            <input id="timedurationpickerJoints" title="timedurationpicker" />
+        </div>
+    </div>
+    <div class="k-d-flex k-justify-content-center">
+        <div class="k-w-300">
+            <label>Muscle</label>
+            <input id="timedurationpickerMuscles" title="timedurationpicker" />
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("#timedurationpickerBrain").kendoTimeDurationPicker({
+                columns: [{ name: "hours", format: "## hours " }, { name: "minutes", format: " ## minutes" }],
+                shortcuts: [
+                    { text: "1h 30min", value: 5400000 },
+                    { text: "2 hours", value: 7200000 },
+                    { text: "2h 30min", value: 9000000 }
+                ],
+                separator: ":"
+            });
+            $("#timedurationpickerSpine").kendoTimeDurationPicker({
+                columns: [{ name: "hours", format: "## hours " }, { name: "minutes", format: " ## minutes" }],
+                shortcuts: [
+                    { text: "1h 30min", value: 5400000 },
+                    { text: "2 hours", value: 7200000 },
+                    { text: "2h 30min", value: 9000000 }
+                ],
+                separator: ":"
+            });
+            $("#timedurationpickerJoints").kendoTimeDurationPicker({
+                columns: [{ name: "hours", format: "## hours " }, { name: "minutes", format: " ## minutes" }],
+                shortcuts: [
+                    { text: "1h 30min", value: 5400000 },
+                    { text: "2 hours", value: 7200000 },
+                    { text: "2h 30min", value: 9000000 }
+                ],
+                separator: ":"
+            });
+            $("#timedurationpickerMuscles").kendoTimeDurationPicker({
+                columns: [{ name: "hours", format: "## hours " }, { name: "minutes", format: " ## minutes" }],
+                shortcuts: [
+                    { text: "1h 30min", value: 5400000 },
+                    { text: "2 hours", value: 7200000 },
+                    { text: "2h 30min", value: 9000000 }
+                ],
+                separator: ":"
+            });
+        });
+    </script>
+
+</div>
