@@ -16,7 +16,7 @@
             </div>
         </div>
         <div class="k-d-flex k-justify-content-center">
-            <div class="k-w-300">
+            <div class="k-w-600">
                 <label>Select duration:</label>
                 <input id="timedurationpicker" title="timedurationpicker" />
             </div>
@@ -25,14 +25,18 @@
     <script>
         $(document).ready(function () {
             $("#timedurationpicker").kendoTimeDurationPicker({
-                columns: [{ name: "hours", format: "## hours " }, { name: "minutes", format: " ## minutes" }],
+                columns: [{ name: "days", format: "## day "},
+                { name: "hours", format: "## hour " },
+                { name: "minutes", format: "## min" },
+                { name: "seconds", format: "## sec" },
+                { name: "milliseconds", format: "### milli" }],
                 shortcuts: [
                     { text: "1h 30min", value: 5400000 },
                     { text: "2h 30min", value: 9000000 },
                     { text: "4 hours", value: 14400000 }
                 ],
                 separator: ":"
-            });            
+            });
         });
     </script>
 

@@ -26,6 +26,12 @@
             <input id="timedurationpickerCulinary" title="timedurationpicker" />
         </div>
     </div>
+    <div class="k-d-flex k-justify-content-center">
+        <div class="k-w-300">
+            <label>TVShow</label>
+            <input id="timedurationpickerTVShow" title="timedurationpicker" />
+        </div>
+    </div>
     <script>
         $(document).ready(function () {
             $("#timedurationpickerNews").kendoTimeDurationPicker({
@@ -61,6 +67,17 @@
                     { text: "1h 30min", value: 5400000 },
                     { text: "2 hours", value: 7200000 },
                     { text: "3 hours", value: 10800000 }
+                ],
+                separator: ":"
+            });
+            $("#timedurationpickerTVShow").kendoTimeDurationPicker({
+                columns: [{ name: "days", format: "## days "}, { name: "hours", format: "## hours " }, { name: "minutes", format: " ## minutes" }, { name: "seconds", format: " ## seconds" }, { name: "milliseconds", format: " #### milliseconds" }],
+                shortcuts: [
+                    { text: "1h 30min", value: 5400000 },
+                    { text: "2 hours", value: 7200000 },
+                    { text: "3 hours", value: 10800000 },
+                    { text: "1 day", value:  131415000 },
+                    { text: "50 days", value: 5000000000 }
                 ],
                 separator: ":"
             });
